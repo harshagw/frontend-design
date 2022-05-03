@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Oswald:700');
+
+@import '0-tools/essentials';
+
+$secondary-color:#ff0718;
+$secondary-second-color:#eaf1f7;
+ 
+body{
+    background: url('../images/bg1.jpg') no-repeat center center fixed;
+    line-height: 1.5;   
+    font-size: 16px;
+
+    @media only screen and (max-width: 1000px) {
+        &{
+            font-size:14px;
+        }
+        .body-wrapper > .login-panel{
+            width: 70vw; 
+            flex-direction: column-reverse;
+            padding: 20px 0;
+    
+            .poster{
+               display: none;
+    
+               img{
+                   display: none;
+                   transform: none;
+               }
+            }
+    
+            .form{
+                width: 100%;
+            }
+        }
+        
+    }
+    
+    @media only screen and (max-width: 560px) {
+        &{
+            font-size:12px;
+        }
+    
+        .body-wrapper > .login-panel{
+            width: 100vw; 
+        }
+    }
+}
+
+
+*{
+    font-family: 'Noto Sans', sans-serif;
+  margin: 0;
+  letter-spacing: 1.5px;
+  box-sizing: border-box;
+}
+
+.body-wrapper{
+    display: flex;
+    min-height:100vh;
+    max-width:100vw;
+    background: rgba(0, 0, 0, 0.58);
+    justify-content: center;
+    align-items: center;
+    color:$text-color;
+
+    .login-panel{
+        // height:500px;
+        width:770px;
+        background: white;
+        border-radius:2px;
+        display: flex;
+
+        .poster{
+            width:40%;
+            
+            img{
+                height:100%;
+                width:110%;
+                border-radius: 5px;
+                transform: translate(40px, -40px);
+            }
+        }
+        
+        .form{
+            width: 60%;
+            padding: 0 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+
+            h1{
+                font-size:2rem;
+                color:$text-color;
+                font-weight: bold;
+                font-family: 'Oswald', sans-serif;
+            }
+
+            .bar{
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-bottom: 30px;
+
+                div.block{
+                    width:20%;
+                    height:4px;
+                    border-radius: 3px;
+                    background:$secondary-second-color ;
+                    margin:10px; 
+
+                    &.selected{
+                        background:$secondary-color;
+                    }
+                }
+            }
+            form{
+                width:100%;
+            }
+            form input{
+                width: 70%;
+                height:60px;
+                border:none;
+                outline: none;
+                padding:5px 0;
+                line-height: 60px;
+                font-size:1.2rem;
+                box-sizing: border-box;
+                padding-left: 54px !important;
+
+                &#password{
+                    background: url(../images/password.png) no-repeat 16px center;
+                }
+                
+                &#username{
+                     background: url(../images/username.png) no-repeat 16px center;
+                    text-transform: capitalize;
+                }
+
+                &:focus{
+                    // border-bottom:5px solid $secondary-second-color;
+                    color: $secondary-color;
+                }
+            }
+
+            .buttons{
+                margin:30px 0;
+                a{
+                    padding:10px 30px;
+                    border-radius: 40px;
+                    text-align: center;
+                    border:2px solid $secondary-color;
+                    box-sizing: border-box;
+                    color:$secondary-color;
+                    font-size:1.2rem;
+                    margin:0 10px;
+
+                    &.login{
+                        background:$secondary-color;
+                        color:white;
+                    }
+                }
+            }
+
+            .forgot{
+                font-size:1.2rem;
+                color: $text-light-color;
+            }
+            }
+        }
+}

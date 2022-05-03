@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500;600;700;800;900&display=swap');
+
+@import '0-tools/normalize';
+
+$primary-color:#fe4d5a;
+
+$text-color:#767677;
+$text-dark-color:#3e3e42;
+$text-light-color:#adb2b7;
+
+$bg-color:#fdfdfe;
+
+$gray-color:#ededf0;
+
+body{
+   background: url('../images/bg.jpg') no-repeat center center fixed;
+   background-size: cover;
+    font-size:16px;
+    line-height: 1.5;
+
+    @media only screen and (max-width: 990px) {
+
+      &{
+        font-size: 14px;
+      }
+
+      .body-wrapper > .movie-card{
+        width:90%;
+      }
+    }
+
+    @media only screen and (max-width: 760px) {
+
+      &{
+        font-size:12px;
+      }
+
+      .body-wrapper > .movie-card{
+        flex-direction: column;
+
+        .poster{
+          height: 20vh;
+          width:100%;
+        }
+  
+        .info{width: 100%;}
+      }
+
+    }
+
+}
+
+*{
+  font-family: 'Noto Sans', sans-serif;
+  margin: 0;
+  letter-spacing: 1.5px;
+}
+
+.body-wrapper{
+    display: flex;
+    min-height:100vh;
+    max-width:100vw;
+    background: rgba(0, 0, 0, 0.58);
+    justify-content: center;
+    align-items: center;
+    color:white;
+
+    .movie-card{
+        // height:550px;
+        width:75%;
+        background: #010101;
+        border-radius:5px;
+        display: flex;
+
+
+        .poster{
+          width: 50%;
+          background: url('../images/bg2.jpg') no-repeat center;
+          background-size: cover;
+          box-shadow: inset -20px 0 15px 0px #010101;
+          border-radius: 5px;
+        }
+
+        .info{
+            width: 50%;
+            padding: 40px 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            .netflix{color:#ec2416;font-size: 3rem; letter-spacing: 0; margin-top:0;}
+
+            .heading{margin:10px 0;}
+
+            .ratings{
+              font-size: 1rem;
+              display: flex;
+              align-items: center;
+
+              .stars{
+                display: flex;
+                .star{color:#ffd700;}
+              }
+
+              span{font-size:1rem;}
+            }
+
+            .about{margin: 10px 0;}
+
+            .other-info{
+              span{color:#ec2416; font-weight: bold;}
+            }
+
+            .buttons{
+              margin-top:20px;
+              display: flex;
+
+              a{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 8px;
+                text-align: center;
+                padding: 15px 12px;
+                font-weight: bold;
+                min-width:40%;
+                margin-right: 20px;
+                color:white;
+                font-size: 1rem;
+
+                ion-icon{
+                  margin-left:5px;
+                }
+              }
+
+              a.play{
+                background:#ec2416;
+              }
+
+              a.add-to-wishlist{
+                border:2px solid white;
+              }
+            }
+        }
+    }
+
+    &.light{
+      background: rgba(255, 255, 255, 0.03);
+      color:#343434;
+
+      .movie-card{
+        background: white;
+        box-shadow: 2px 0px 114px -1px rgba(0,0,0,0.72);
+
+        .poster{
+          background: url('../images/bg6.jpg') no-repeat center;
+          box-shadow: inset -20px 0 15px 0px white;
+        }
+
+        .info{
+
+          .buttons{
+              a.add-to-wishlist{
+                border-color:#343434;
+                color:#343434;
+              }
+          }
+        }
+      }
+    }
+}

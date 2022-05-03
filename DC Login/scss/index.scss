@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Oswald:700');
+
+@import '0-tools/essentials';
+
+body{
+    background: black;
+    line-height: 1.5; 
+}
+
+*{
+    font-family: 'Noto Sans', sans-serif;
+  margin: 0;
+  letter-spacing: 1.5px;
+} 
+
+.body-wrapper{
+    display: flex;
+    min-height:100vh;
+    max-width:100vw;
+    background: rgba(0, 0, 0, 0.58);
+    justify-content: center;
+    align-items: center;
+    color:$text-color;
+
+    .login-panel{
+        height:500px;
+        width:440px;
+        background: white;
+        border-radius:2px;
+        display: flex;
+
+        .form{
+            width: 100%;
+            padding: 0 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+
+            h1{
+                font-size:32px;
+                color:#0a0b18;
+                font-weight: bold;
+                font-family: 'Oswald', sans-serif;
+            }
+
+            .bar{
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-bottom: 30px;
+
+                div.block{
+                    width:20%;
+                    height:4px;
+                    border-radius: 3px;
+                    background:#eaf1f7 ;
+                    margin:10px; 
+
+                    &.selected{
+                        background:#e80e0d;
+                    }
+                }
+            }
+            form{
+                width:100%;
+            }
+            form input{
+                width: 70%;
+                height:60px;
+                border:none;
+                outline: none;
+                padding:5px 0;
+                line-height: 60px;
+                font-size:20px;
+                box-sizing: border-box;
+                padding-left: 54px !important;
+
+                &#password{
+                    background: url(../images/password.png) no-repeat 16px center;
+                }
+                
+                &#username{
+                     background: url(../images/username.png) no-repeat 16px center;
+                    text-transform: capitalize;
+                }
+
+                &:focus{
+                    border-bottom:5px solid #eaf1f7;
+                    color: #e80e0d;
+                }
+            }
+
+            .buttons{
+                margin:30px 0;
+                a{
+                    padding:10px 30px;
+                    border-radius: 40px;
+                    text-align: center;
+                    border:2px solid #e80e0d;
+                    box-sizing: border-box;
+                    color:#e80e0d;
+                    font-size:20px;
+                    margin:0 10px;
+                    text-decoration: none;
+
+                    &.login{
+                        background:#e80e0d;
+                        color:white;
+                    }
+                }
+            }
+
+            .forgot{
+                font-size:20px;
+                color: $text-light-color;
+            }
+            }
+        }
+}
+
+@media only screen and (max-width: 580px) {
+  
+.body-wrapper > .login-panel{
+    width: 100vw; 
+}
+
+}

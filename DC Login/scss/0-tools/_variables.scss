@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Oswald:700');
+
+// Font family 
+$oswald: 'Oswald', sans-serif;
+$tajawal: 'Tajawal', sans-serif;
+
+// Colors
+$black:#1d2129;
+$white:#ffffff;
+$grey:#fafafa;
+
+$primary-color:#3b5998;
+$secondary-color:#1a73e8;
+
+$text-color:#767677;
+$text-dark-color:#3e3e42;
+$text-light-color:#adb2b7;
+
+
+$border-color:#383838;
+
+$colorpercent: 10%;
+
+//Sizes
+$size-1:3rem;
+$size-2:2.5rem;
+$size-3:2rem;
+$size-4:1.5rem;
+$size-5:1rem;
+$size-6:0.5rem;
+
+// Body
+$body-background-color: $white;
+$body-color:$text-color;
+$body-family: $tajawal;
+$body-weight:normal;
+$body-size:16px;
+$body-line-height:1.5;
+
+$padding:$size-4;
+$margin:$size-4;
+$border:$size-6;
+
+$border-round:4px;
+
+// Grid
+
+$gap:64px;
+$tablet:769px;
+$desktop:960px + ($gap * 2);
+$widescreen:1152px + ($gap * 2);

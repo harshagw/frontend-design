@@ -1,0 +1,11 @@
+@import '_variables.scss';
+@import '_normalize.scss';
+
+html{
+    line-height: $body-line-height;
+}
+
+body{
+    background: $body-background-color;
+    margin: 0;
+}

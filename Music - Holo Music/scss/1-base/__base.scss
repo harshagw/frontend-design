@@ -1,0 +1,13 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,800,900');
+
+@import '_colors';
+@import '_utility';
+@import '_grid';
+
+body{
+    line-height: 1.5;
+    background: $bg-color;
+    overflow-x: hidden;
+}
+
+*{font-family: 'Montserrat', sans-serif;margin:0}

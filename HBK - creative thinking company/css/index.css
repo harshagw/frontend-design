@@ -1,0 +1,175 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,700");
+@import url("/normalize.css");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif; }
+
+.cf:before,
+.cf:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */ }
+
+.cf:after {
+  clear: both; }
+
+/**
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+.cf {
+  *zoom: 1; }
+
+body {
+  background: #4F31A8; }
+
+.center {
+  width: 920px;
+  margin: 0 auto; }
+
+.header {
+  width: 100%;
+  height: 80px;
+  background: #4c2da2; }
+  .header .nav {
+    float: left; }
+    .header .nav li {
+      list-style-type: none;
+      float: left; }
+      .header .nav li :before {
+        /* Unicode bullet symbol */
+        content: '\2022 ';
+        color: #6d45e1;
+        padding-right: 20px; }
+      .header .nav li a {
+        color: white;
+        text-decoration: none;
+        line-height: 80px;
+        padding: 0 20px;
+        font-size: 14px; }
+  .header .talk_btn {
+    background: #f14b59;
+    line-height: 80px;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 0 20px;
+    height: 100%;
+    float: right; }
+
+.intro {
+  padding: 100px 0; }
+  .intro .title h2 {
+    float: left;
+    color: #fec501; }
+  .intro .title p {
+    float: left;
+    color: white;
+    padding-top: 4px;
+    margin-left: 5px; }
+  .intro h1 {
+    color: white;
+    font-size: 4em;
+    margin-bottom: 0; }
+
+.main-body {
+  height: 450px; }
+  .main-body .center {
+    background: white;
+    border-radius: 2px;
+    height: 100%; }
+
+.bottom_nav {
+  padding: 100px 0; }
+  .bottom_nav .list_nav {
+    float: left;
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; }
+    .bottom_nav .list_nav .list {
+      width: 50%; }
+      .bottom_nav .list_nav .list h1 {
+        color: white; }
+      .bottom_nav .list_nav .list ul li {
+        list-style-type: none; }
+        .bottom_nav .list_nav .list ul li a {
+          color: white;
+          text-decoration: none;
+          font-weight: normal;
+          line-height: 30px; }
+    .bottom_nav .list_nav :nth-child(1) h1 {
+      color: #f56640; }
+    .bottom_nav .list_nav :nth-child(2) h1 {
+      color: #fdc400; }
+    .bottom_nav .list_nav :nth-child(3) h1 {
+      color: #beea46; }
+    .bottom_nav .list_nav :nth-child(4) h1 {
+      color: #00c3c9; }
+  .bottom_nav .contact {
+    float: right;
+    width: 50%; }
+    .bottom_nav .contact h1 {
+      color: white; }
+    .bottom_nav .contact .contact-form input[type="name"], .bottom_nav .contact .contact-form input[type="email"] {
+      width: 100%;
+      background: inherit;
+      border: 0;
+      border-bottom: 1px solid #6d45e1;
+      height: 40px;
+      line-height: 40px;
+      padding: 0 10px;
+      color: white;
+      outline: none;
+      margin-bottom: 20px; }
+    .bottom_nav .contact .contact-form ::-webkit-input-placeholder {
+      /* Chrome */
+      color: white; }
+    .bottom_nav .contact .contact-form :-ms-input-placeholder {
+      /* IE 10+ */
+      color: white; }
+    .bottom_nav .contact .contact-form ::-moz-placeholder {
+      /* Firefox 19+ */
+      color: white;
+      opacity: 1; }
+    .bottom_nav .contact .contact-form :-moz-placeholder {
+      /* Firefox 4 - 18 */
+      color: white;
+      opacity: 1; }
+    .bottom_nav .contact .contact-form input[type="submit"] {
+      color: white;
+      font-weight: bold;
+      text-decoration: none;
+      padding: 15px 20px;
+      background: #f14b59;
+      border: 0;
+      border-radius: 2px;
+      cursor: pointer;
+      margin-top: 20px; }
+
+.footer {
+  height: 100px;
+  background: #4c2da2;
+  width: 100%; }
+  .footer .center {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    height: 100%; }
+    .footer .center .title h2 {
+      float: left;
+      color: #fec501; }
+    .footer .center .title p {
+      float: left;
+      color: white;
+      padding-top: 4px;
+      margin-left: 5px; }
+    .footer .center .rights_div p {
+      color: white; }
+
+/*# sourceMappingURL=index.css.map */

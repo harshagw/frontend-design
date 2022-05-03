@@ -1,0 +1,27 @@
+@import '_colors';
+
+@mixin grid-layout($element,$class-slug){
+    margin:20px 0;
+
+    $columns:6;
+
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-column-gap: 20px;
+
+    $int: 1;
+    @for $n from 1 through $element{
+
+        .#{$class-slug}-#{$n}{
+            grid-column-start: $int;
+            $int: $int + 6/$element;
+            grid-column-end: $int;
+
+            background: $bg-sec-color;
+        }
+
+    }
+
+    
+}
+

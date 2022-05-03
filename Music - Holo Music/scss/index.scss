@@ -1,0 +1,217 @@
+@import '0-tools/normalize';
+@import '1-base/_base';
+
+.header{
+  display:flex;
+  padding:20px;
+  position: fixed;
+  height:100px;
+  width:100%;
+  align-items:center;
+  align-content: space-between;
+  z-index:1;
+
+  transition: background 1s ease;
+
+  &.header--colorchange{
+
+  }
+
+  .logo{
+    width:$sidebar-width;
+    display: inline-flex;
+    align-items: center; 
+
+    .logo__img{
+      height:50px;
+    }
+
+    p{
+      margin-left:20px;
+      color:$text-color;
+      font-size: 20px;
+      font-weight: 400;
+    }
+  } 
+
+  .search{
+   flex-grow:1;
+   display: inline-flex;
+
+    .search__arrow{
+      background: #111217;
+      display: block;
+      color:$text-sec-color;
+      padding: 12px 15px 10px;
+      margin-right:10px;
+      border-radius:5px;
+      height:40px;
+
+      &.disable{
+        filter: blur(1.3px);
+      }
+    }
+    .search__input{
+      margin-left:10px;
+      background: #2a2d32;
+      width:350px;
+      height:40px;
+      border-radius: 5px;
+      border:0;
+      outline: none;
+      padding:10px 20px;
+      color:$text-sec-color;
+      padding-left: 44px !important;
+      background: #2a2d32 url(../images/search.png) no-repeat 16px center;
+    }
+  }
+
+  .nav{
+
+    .nav__notification{
+      color:$text-sec-color;
+      font-size:24px;
+      margin-right:20px;
+    }
+
+    .nav__profile img{
+      width:40px;
+      height:40px;
+      border-radius: 20px;
+    }
+  }
+}
+
+.container{
+  display: flex;
+
+  .sidebar{
+      background: $bg-sec-color; 
+      width:$sidebar-width;
+      transition: width 1s; 
+
+      .sidebar-fixed{
+        display: flex;
+        flex-direction: column;
+
+        width:$sidebar-width;
+        background: $bg-sec-color;
+        max-height: 100vh;
+    
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+    
+        padding:100px 0px 20px;
+        
+        transition:width 1s; 
+
+        .list{
+          display: inline-block;
+          width:100%;
+          margin-bottom:30px;
+          
+          p.heading{
+            padding:0 20px;
+            margin-bottom:20px;
+            color:$text-color;
+            transition:visibility 1s;
+            white-space: nowrap;
+            font-weight: 500;
+          }
+
+          a{
+            display: flex;
+            align-items: center;
+            font-size:16px;
+            color:$text-sec-color;
+            width: 100%;
+            margin-bottom:15px;
+            padding:0 20px; 
+            font-weight:100;
+
+            .icon{
+              height:22px;
+              width:22px;
+              position: relative;
+            }
+
+            span{
+              margin-left:20px;
+              flex-grow:1;
+              white-space:nowrap;
+              transition: display 1s ease-in-out;
+            }
+
+            &.active{
+              border-left:2px solid $primary-color;
+              color:$primary-color;
+            }
+
+          }
+  
+        }
+      }
+
+      &.hide{
+        width:$sidebar-small-width;
+
+        .sidebar-fixed{
+          width:$sidebar-small-width;
+
+          .list{
+            p.heading{visibility: hidden;}
+            a{
+              height:24px;
+              span{display: none;}
+              .icon{
+                margin:1px 0;
+              }
+            }
+            
+          }          
+        }
+      }
+  }
+
+  .main{
+      min-height:100vh;
+      flex-grow:1;
+      padding:100px 20px 20px;
+      border:20px solid $bg-color;
+
+      .main--tag{
+        background: $bg-sec-color;
+        color:$text-sec-color;
+        letter-spacing: 1px;
+        font-size:14px;
+        padding:6px 10px;
+        display: inline-block;
+        text-transform: uppercase;
+        margin:0;
+        border-radius:5px;
+
+      }
+
+      .banner{
+        height:500px;
+        background: $bg-sec-color;
+      }
+
+      .albums{
+        margin:20px 0;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        grid-gap:20px;
+
+        div{
+          background: $bg-sec-color;
+          height:200px;
+          grid-column: span 2;
+        }
+      }
+
+  }
+
+}

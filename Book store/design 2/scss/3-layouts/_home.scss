@@ -1,0 +1,12 @@
+.home-wrap {
+  display: flex;
+  min-height: 100vh;
+
+  .home-sections {
+    flex: 1;
+    margin: 50px 100px 50px 50px;
+    p {
+      margin: 0;
+    }
+  }
+}

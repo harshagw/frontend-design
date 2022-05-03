@@ -1,0 +1,146 @@
+@importurl('https://fonts.googleapis.com/cssfamily=Roboto:400,900');
+
+@import url('https://fonts.googleapis.com/css?family=Akronim');
+
+$main-color:#F8A038;
+$black:#36434d;
+$grey:#a09ea2;
+
+*{
+  font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+.clearfix { display: inline-block; }
+
+* html .clearfix { height: 1%; }
+.clearfix { display: block; }
+
+
+.body{
+  width:100%;
+  height:400px;
+  overflow:hidden;
+ display: flex;
+ background:#006080;
+
+  .section{
+    height:100%;
+    overflow:hidden;
+  }
+
+  .main{
+    width:35%;
+    padding:60px 80px;
+        
+      .main-data{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height:100%;
+        width:100%;
+        position:relative;
+          
+          .icon{
+              position: absolute;
+              top: 0;
+              left:0px;
+              
+              a{
+                  color:$main-color;
+                  font-family: 'Akronim', cursive;
+                  font-size:3rem;
+                  text-decoration: none;
+              }
+          }
+          
+          .main-data-footer{
+              position: absolute;
+              bottom: 0;
+              left:0px;
+              color: $grey;
+              a{
+                  color:$main-color;
+                  text-decoration: none;
+              }
+          }
+          
+          .form {
+              width:100%;
+              
+              .form-info{
+                  color:$grey;
+                    letter-spacing: 2px;
+                    line-height: 22px;
+                  
+                  span{
+                      font-weight: bold;
+                  }
+              }
+              form{
+                  input[type='text'],input[type='email'],input[type="password"]{
+                      padding: 16px;
+                      border: 1px solid #cfd9db;
+                      background-color: #ffffff;
+                      border-radius: .25em;
+                      box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.08);
+                      margin-bottom:10px;
+                      width:100%;
+                  }
+                  
+                  input.icon-input{
+                      padding-left: 54px !important;
+                  }
+                  
+                  .email{
+                      background: url(../img/email-icon.svg) no-repeat 16px center;
+                  }
+                  
+                  .password, .name{
+                       background: url(../img/user-icon.svg) no-repeat 16px center;
+                  }
+                  
+                  input[type="submit"]{
+                    border: none;
+                    background: $main-color;
+                    border-radius: .25em;
+                    padding: 16px 20px;
+                    color: #ffffff;
+                    font-weight: bold;
+                    float: right;
+                    cursor: pointer;
+                    -webkit-font-smoothing: antialiased;
+                    -moz-osx-font-smoothing: grayscale;
+                    -webkit-appearance: none;
+                    -moz-appearance: none;
+                    -ms-appearance: none;
+                    -o-appearance: none;
+                    appearance: none;
+                  }
+                  
+                  .forgot-password{
+                      color:$grey;
+                      float:left;
+                      text-decoration: none;
+                      padding:18px 0;
+                  }
+              }
+          }
+      }
+  }
+
+  .bg{
+    width:65%;
+    padding:40px;
+  }
+
+}

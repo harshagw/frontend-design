@@ -1,0 +1,56 @@
+.list-container{
+  margin-bottom:$gutter;
+
+  .list-title{
+    color:$primary-color;
+    margin-bottom:20px;
+    font-weight:normal;
+
+    a{
+      color:$primary-color;
+    }
+  }
+
+  .list-box{
+    display: flex;
+
+    .list-item{
+      display: flex;
+      width:173px;
+      flex-direction: column;
+      margin-right:$gutter;
+
+      img{
+        height:291px;
+        width:173px;
+      }
+
+      h4 a{
+        color:$text-color;
+      }
+
+      p{
+        color:$text-light-color;
+      }
+    }
+
+    &.list-vertical{
+      flex-direction: column;
+      list-style-type: none;
+      padding:0;
+
+        li{
+          margin:$gutter/8 0;
+
+          &:first-of-type{
+            margin-top:0;
+          }
+
+          a{
+            color:$text-light-color;
+          }
+        }
+    }
+  }
+
+}

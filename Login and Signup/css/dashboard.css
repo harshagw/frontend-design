@@ -1,0 +1,97 @@
+@import url("https://fonts.googleapis.com/css?family=Akronim");
+@importurl ('https://fonts.googleapis.com/cssfamily=Roboto:400,900');
+* {
+  font-family: 'Roboto', sans-serif;
+  box-sizing: border-box; }
+
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0; }
+
+.clearfix {
+  display: inline-block; }
+
+* html .clearfix {
+  height: 1%; }
+
+.clearfix {
+  display: block; }
+
+body {
+  background: white;
+  overflow-x: hidden;
+  display: flex;
+  min-height: 100vh; }
+
+.main-header {
+  height: 100vh;
+  width: 240px; }
+  .main-header .main-header-body {
+    background: #F7F9FA;
+    padding: 40px 0 0 40px;
+    height: 100%;
+    width: 240px;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    bottom: 0; }
+    .main-header .main-header-body .icon {
+      display: block;
+      color: #2b9cf2;
+      font-family: 'Akronim', cursive;
+      font-size: 42px;
+      text-decoration: none;
+      margin-bottom: 40px;
+      cursor: pointer; }
+    .main-header .main-header-body .header-list {
+      list-style-type: none;
+      padding: 0;
+      margin: 0 40px 0 0; }
+      .main-header .main-header-body .header-list .header-links {
+        display: block;
+        height: 40px; }
+        .main-header .main-header-body .header-list .header-links a {
+          font-size: 16px;
+          line-height: 16px;
+          color: #637282;
+          display: block;
+          text-decoration: none; }
+          .main-header .main-header-body .header-list .header-links a.active {
+            color: #2b9cf2; }
+
+.main {
+  padding: 0 40px;
+  flex-grow: 1; }
+  .main .top-body-header {
+    padding: 40px 0px; }
+    .main .top-body-header h2 {
+      display: block;
+      float: left;
+      padding: 0;
+      margin: 0;
+      color: #3d464d;
+      font-weight: normal; }
+  .main .content .content-heading {
+    color: #1B2733;
+    padding: 0;
+    margin: 0;
+    font-weight: normal;
+    font-size: 20px; }
+    .main .content .content-heading:after {
+      content: "\f05a";
+      font-family: FontAwesome;
+      font-style: normal;
+      font-weight: normal;
+      text-decoration: inherit;
+      padding-left: 7px;
+      color: #2b9cf2;
+      opacity: 0.5; }
+  .main .content .content-para {
+    font-size: 16px; }
+
+/*# sourceMappingURL=dashboard.css.map */

@@ -1,0 +1,108 @@
+@import url("https://fonts.googleapis.com/css?family=Akronim");
+@importurl ('https://fonts.googleapis.com/cssfamily=Roboto:400,900');
+* {
+  font-family: 'Roboto', sans-serif;
+  box-sizing: border-box; }
+
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0; }
+
+.clearfix {
+  display: inline-block; }
+
+* html .clearfix {
+  height: 1%; }
+
+.clearfix {
+  display: block; }
+
+.body {
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+  display: flex;
+  background: #006080; }
+  .body .section {
+    height: 100%;
+    overflow: hidden; }
+  .body .main {
+    width: 35%;
+    padding: 60px 80px; }
+    .body .main .main-data {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      width: 100%;
+      position: relative; }
+      .body .main .main-data .icon {
+        position: absolute;
+        top: 0;
+        left: 0px; }
+        .body .main .main-data .icon a {
+          color: #F8A038;
+          font-family: 'Akronim', cursive;
+          font-size: 3rem;
+          text-decoration: none; }
+      .body .main .main-data .main-data-footer {
+        position: absolute;
+        bottom: 0;
+        left: 0px;
+        color: #a09ea2; }
+        .body .main .main-data .main-data-footer a {
+          color: #F8A038;
+          text-decoration: none; }
+      .body .main .main-data .form {
+        width: 100%; }
+        .body .main .main-data .form .form-info {
+          color: #a09ea2;
+          letter-spacing: 2px;
+          line-height: 22px; }
+          .body .main .main-data .form .form-info span {
+            font-weight: bold; }
+        .body .main .main-data .form form input[type='text'], .body .main .main-data .form form input[type='email'], .body .main .main-data .form form input[type="password"] {
+          padding: 16px;
+          border: 1px solid #cfd9db;
+          background-color: #ffffff;
+          border-radius: .25em;
+          box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.08);
+          margin-bottom: 10px;
+          width: 100%; }
+        .body .main .main-data .form form input.icon-input {
+          padding-left: 54px !important; }
+        .body .main .main-data .form form .email {
+          background: url(../img/email-icon.svg) no-repeat 16px center; }
+        .body .main .main-data .form form .password, .body .main .main-data .form form .name {
+          background: url(../img/user-icon.svg) no-repeat 16px center; }
+        .body .main .main-data .form form input[type="submit"] {
+          border: none;
+          background: #F8A038;
+          border-radius: .25em;
+          padding: 16px 20px;
+          color: #ffffff;
+          font-weight: bold;
+          float: right;
+          cursor: pointer;
+          -webkit-font-smoothing: antialiased;
+          -moz-osx-font-smoothing: grayscale;
+          -webkit-appearance: none;
+          -moz-appearance: none;
+          -ms-appearance: none;
+          -o-appearance: none;
+          appearance: none; }
+        .body .main .main-data .form form .forgot-password {
+          color: #a09ea2;
+          float: left;
+          text-decoration: none;
+          padding: 18px 0; }
+  .body .bg {
+    width: 65%;
+    padding: 40px; }
+
+/*# sourceMappingURL=login.css.map */

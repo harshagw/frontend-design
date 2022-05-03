@@ -1,0 +1,218 @@
+.body-wrapper{
+  display: flex;
+  min-height:100vh;
+
+  .sidebar{
+    width:280px;
+    background: $primary-color;
+
+    .sidebar-fixed{
+      display: flex;
+      flex-direction:column;
+      justify-content: space-between;
+      width:280px;
+      background: $primary-color;
+      max-height: 100vh;
+
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      left: 0;
+
+      .sidebar-header{
+        padding:20px 0;
+
+        h1{
+          margin:0;
+          font-weight: normal;
+          text-align: center;
+          color: white;
+        }
+      }
+
+      .sidebar-nav{
+        flex:1;
+
+        .profile{
+          text-align: center;
+          padding:20px 0;
+
+          img{
+            border-radius: 50%;
+            border:4px solid darken( $primary-color, 12% );
+            height:100px;
+          }
+
+          a{
+            display: block;
+            color: white;
+            font-size: 18px;
+            font-weight: 600;
+          }
+        }
+
+
+        ul.sidebar-nav{
+          padding: 0;
+
+          li{
+            list-style-type: none;
+            width:100%;
+            margin:20px 0;
+
+            &.active{
+              border-left:3px solid white;
+
+              a{
+                color:white;
+              }
+            }
+
+            a{
+              color:$gray-light-color;
+              margin-left:60px;
+              font-size: 18px;
+
+              i{
+                padding-right:10px;
+                font-size: 20px;
+              }
+            }
+          }
+        }
+      }
+
+      .sidebar-footer{
+        padding:20px 0;
+        text-align: center;
+
+        a.logout{
+          text-align: center;
+          color:$gray-color;
+          font-size:20px;
+          border-radius: 50%;
+          border: 2px solid $gray-color;
+          padding: 10px 15px;
+          i{
+
+          }
+        }
+      }
+    }
+  }
+
+  .main{
+      flex:1;
+
+      .main-container{
+        width:90%;
+        margin:0 auto;
+      }
+
+      .main-header{
+        padding:20px 0;
+        border-bottom: 1px solid $gray-color;
+
+        .main-header_container{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          form{
+            flex:1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            i{
+              display: inline-block;
+              color:$gray-color;
+              padding-right: 15px;
+            }
+            input{
+              height:100%;
+              border: 0;
+              width:100%;
+              outline: none;
+            }
+          }
+
+          .notification{
+            color:$gray-color;
+            padding:0 30px;
+          }
+
+          .create-button{
+            display: block;
+            color: white;
+            padding: 8px 25px;
+            background: $primary-color;
+            border-radius: 3px;
+
+          }
+
+        }
+      }
+
+      .main-section{
+        margin:20px 0;
+
+        .section-header{
+          display: flex;
+          margin-bottom:20px;
+
+          h2{
+            color:$text-color;
+          }
+        }
+
+        .section-main{}
+
+        &.settings{
+
+          .section-main{
+            width:50%;
+
+            .setting-form{
+
+              .input-group{
+                margin-bottom: 15px;
+
+                label{
+                  color:$text-light-color;
+                  display: flex;
+                  cursor: pointer;
+                  margin-bottom: 5px;
+
+                  .validation{
+
+                      &.error{
+                        color:$red-color;
+                      }
+                  }
+
+                  .optional{
+                    color:$text-light-color;
+                    font-weight: normal;
+                  }
+                }
+
+                input{
+                  display: inline-block;
+                  width:100%;
+                  outline: none;
+                  padding:10px;
+                  font-size: 16px;
+                  border:1px solid $gray-color;
+                  border-radius: 4px;
+                  color:$text-color;
+                }
+
+
+              }
+            }
+          }
+        }
+      }
+  }
+}

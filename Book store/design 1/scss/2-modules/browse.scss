@@ -1,0 +1,62 @@
+.browse{
+  display: flex;
+  flex-direction: column;
+
+    .filter{
+
+      ul{
+        list-style-type: none;
+        padding:0;
+
+        li{
+          float:left;
+          margin:0 $gutter/2;
+
+          &:first-of-type{
+            margin-left:0;
+          }
+
+          &:last-of-type{
+            margin-right:0;
+          }
+
+          a{
+            display: inline-block;
+            color:$text-light-color;
+
+            &.active{
+              color:$text-color;
+              border-bottom:1px solid $primary-color;
+            }
+          }
+        }
+      }
+    }
+
+    .browse-books{
+      margin:$gutter $gutter $gutter 0;
+      display: flex;
+      flex-wrap: wrap;
+
+      .book{
+        display: flex;
+        width:173px;
+        flex-direction: column;
+        margin-right:$gutter;
+
+        img{
+          height:291px;
+          width:173px;
+        }
+
+        h4 a{
+          color:$text-color;
+        }
+
+        p{
+          color:$text-light-color;
+        }
+      }
+
+    }
+}
